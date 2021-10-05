@@ -13,7 +13,7 @@ namespace DSM5.Data
         public int DisorderID { get; set; }
         [Required]
         [Display(Name = "ICD-10-CM")]
-        public string ICD10 { get; set; }
+        public string ICD { get; set; }
         [Required]
         public string Subcategory { get; set; }
         [Required]
