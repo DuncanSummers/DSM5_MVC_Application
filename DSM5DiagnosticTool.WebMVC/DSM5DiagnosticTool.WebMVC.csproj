@@ -256,6 +256,14 @@
       <Project>{F77174DE-297A-4D62-855F-7C32A2FAFB34}</Project>
       <Name>DSM5.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DSM5.Models\DSM5.Models.csproj">
+      <Project>{edc4d439-8fdf-4df8-a008-90bd72690fc8}</Project>
+      <Name>DSM5.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DSM5.Services\DSM5.Services.csproj">
+      <Project>{c7a56f69-7faa-4868-8256-2b002ee11964}</Project>
+      <Name>DSM5.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
