@@ -54,11 +54,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DisorderCreate.cs" />
+    <Compile Include="DisorderDetail.cs" />
+    <Compile Include="DisorderEdit.cs" />
+    <Compile Include="DisorderListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DSM5.Data\DSM5.Data.csproj">
+      <Project>{F77174DE-297A-4D62-855F-7C32A2FAFB34}</Project>
+      <Name>DSM5.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
