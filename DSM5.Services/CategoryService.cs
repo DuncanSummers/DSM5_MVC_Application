@@ -42,7 +42,54 @@ namespace DSM5.Services
                         {
                             CategoryID = e.CategoryID,
                             CategoryName = e.CategoryName
-                        })
+                        });
+                return query.ToArray();
+            }
+        }
+
+        public CategoryDetail GetCategoryByID(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Categories
+                        .Single(e => e.CategoryID == id);
+                return new CategoryDetail()
+                {
+                    CategoryID = entity.CategoryID,
+                    CategoryName = entity.CategoryName
+                };
+            }
+        }
+
+        public bool UpdateCategory(CategoryEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Categories
+                        .Single(e => e.CategoryID == model.CategoryID);
+
+                entity.CategoryName = model.CategoryName;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteCategory(int categoryID)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Categories
+                        .Single(e => e.CategoryID == categoryID);
+
+                ctx.Categories.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
             }
         }
     }

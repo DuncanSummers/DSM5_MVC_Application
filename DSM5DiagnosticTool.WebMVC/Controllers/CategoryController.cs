@@ -10,15 +10,15 @@ using System.Web.Mvc;
 namespace DSM5DiagnosticTool.WebMVC.Controllers
 {
     [Authorize]
-    public class DisorderController : Controller
+    public class CategoryController : Controller
     {
-        // GET: Disorder
+        // GET: Category
         public ActionResult Index()
         {
             return View();
         }
 
-        // GET
+        // GET:
         public ActionResult Create()
         {
             return View();
@@ -26,80 +26,76 @@ namespace DSM5DiagnosticTool.WebMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(DisorderCreate model)
+        public ActionResult Create(CategoryCreate model)
         {
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
 
-            var service = CreateDisorderService();
+            var service = CreateCategoryService();
 
-            if (service.CreateDisorder(model))
+            if (service.CreateCategory(model))
             {
-                TempData["SaveResult"] = "Disorder added.";
+                TempData["SaveResult"] = "Category added.";
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError("", "Disorder failed to add.");
+            ModelState.AddModelError("", "Category failed to add.");
 
             return View(model);
         }
 
         public ActionResult Details(int id)
         {
-            var svc = CreateDisorderService();
-            var model = svc.GetDisorderByID(id);
+            var svc = CreateCategoryService();
+            var model = svc.GetCategoryByID(id);
 
             return View(model);
         }
 
         public ActionResult Edit(int id)
         {
-            var service = CreateDisorderService();
-            var detail = service.GetDisorderByID(id);
+            var service = CreateCategoryService();
+            var detail = service.GetCategoryByID(id);
             var model =
-               new DisorderEdit
+               new CategoryEdit
                {
-                   DisorderID = detail.DisorderID,
-                   ICD = detail.ICD,
-                   Category = detail.Category,
-                   DisorderName = detail.DisorderName,
-                   Symptoms = detail.Symptoms,
-                   Comorbidities = detail.Comorbidities
+                   CategoryID = detail.CategoryID,
+                   CategoryName = detail.CategoryName
                };
             return View(model);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, DisorderEdit model)
+        public ActionResult Edit(int id, CategoryEdit model)
         {
             if (!ModelState.IsValid) return View(model);
 
-            if (model.DisorderID != id)
+            if (model.CategoryID != id)
             {
                 ModelState.AddModelError("", "Wrong ID");
                 return View(model);
             }
 
-            var service = CreateDisorderService();
-            
-            if (service.UpdateDisorder(model))
+            var service = CreateCategoryService();
+
+            if (service.UpdateCategory(model))
             {
-                TempData["SaveResult"] = "Disorder updated.";
+                TempData["SaveResult"] = "Category updated.";
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError("", "Unable to update disorder.");
+            ModelState.AddModelError("", "Unable to update category.");
             return View(model);
         }
 
         [ActionName("Delete")]
         public ActionResult Delete(int id)
         {
-            var svc = CreateDisorderService();
-            var model = svc.GetDisorderByID(id);
+            var svc = CreateCategoryService();
+            var model = svc.GetCategoryByID(id);
 
             return View(model);
         }
@@ -107,20 +103,21 @@ namespace DSM5DiagnosticTool.WebMVC.Controllers
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteDisorder(int id)
+        public ActionResult DeleteCategory(int id)
         {
-            var service = CreateDisorderService();
+            var service = CreateCategoryService();
 
-            service.DeleteDisorder(id);
+            service.DeleteCategory(id);
 
-            TempData["DaveResult"] = "Disorder deleted.";
+            TempData["DaveResult"] = "Category deleted.";
             return RedirectToAction("Index");
         }
 
-        private DisorderService CreateDisorderService()
+
+        private CategoryService CreateCategoryService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new DisorderService(userId);
+            var service = new CategoryService(userId);
             return service;
         }
     }
