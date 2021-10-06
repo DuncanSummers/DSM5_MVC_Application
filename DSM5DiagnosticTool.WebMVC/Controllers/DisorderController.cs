@@ -113,7 +113,7 @@ namespace DSM5DiagnosticTool.WebMVC.Controllers
 
             service.DeleteDisorder(id);
 
-            TempData["DaveResult"] = "Disorder deleted.";
+            TempData["SaveResult"] = "Disorder deleted.";
             return RedirectToAction("Index");
         }
 

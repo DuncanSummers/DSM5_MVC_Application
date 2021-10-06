@@ -10,9 +10,9 @@ using System.Web.Mvc;
 namespace DSM5DiagnosticTool.WebMVC.Controllers
 {
     [Authorize]
-    public class CategoryController : Controller
+    public class SymptomController : Controller
     {
-        // GET: Category
+        // GET: Symptom
         public ActionResult Index()
         {
             return View();
@@ -26,76 +26,76 @@ namespace DSM5DiagnosticTool.WebMVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(CategoryCreate model)
+        public ActionResult Create(SymptomCreate model)
         {
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
 
-            var service = CreateCategoryService();
+            var service = CreateSymptomService();
 
-            if (service.CreateCategory(model))
+            if (service.CreateSymptom(model))
             {
-                TempData["SaveResult"] = "Category added.";
+                TempData["SaveResult"] = "Symptom added.";
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError("", "Category failed to add.");
+            ModelState.AddModelError("", "Symptom failed to add.");
 
             return View(model);
         }
 
         public ActionResult Details(int id)
         {
-            var svc = CreateCategoryService();
-            var model = svc.GetCategoryByID(id);
+            var svc = CreateSymptomService();
+            var model = svc.GetSymptomByID(id);
 
             return View(model);
         }
 
         public ActionResult Edit(int id)
         {
-            var service = CreateCategoryService();
-            var detail = service.GetCategoryByID(id);
+            var service = CreateSymptomService();
+            var detail = service.GetSymptomByID(id);
             var model =
-               new CategoryEdit
+               new SymptomEdit
                {
-                   CategoryID = detail.CategoryID,
-                   CategoryName = detail.CategoryName
+                   SymptomID = detail.SymptomID,
+                   Description = detail.Description
                };
             return View(model);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, CategoryEdit model)
+        public ActionResult Edit(int id, SymptomEdit model)
         {
             if (!ModelState.IsValid) return View(model);
 
-            if (model.CategoryID != id)
+            if (model.SymptomID != id)
             {
                 ModelState.AddModelError("", "Wrong ID");
                 return View(model);
             }
 
-            var service = CreateCategoryService();
+            var service = CreateSymptomService();
 
-            if (service.UpdateCategory(model))
+            if (service.UpdateSymptom(model))
             {
-                TempData["SaveResult"] = "Category updated.";
+                TempData["SaveResult"] = "Symptom updated.";
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError("", "Unable to update category.");
+            ModelState.AddModelError("", "Unable to update symptom.");
             return View(model);
         }
 
         [ActionName("Delete")]
         public ActionResult Delete(int id)
         {
-            var svc = CreateCategoryService();
-            var model = svc.GetCategoryByID(id);
+            var svc = CreateSymptomService();
+            var model = svc.GetSymptomByID(id);
 
             return View(model);
         }
@@ -103,22 +103,23 @@ namespace DSM5DiagnosticTool.WebMVC.Controllers
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteCategory(int id)
+        public ActionResult DeleteSymptom(int id)
         {
-            var service = CreateCategoryService();
+            var service = CreateSymptomService();
 
-            service.DeleteCategory(id);
+            service.DeleteSymptom(id);
 
-            TempData["SaveResult"] = "Category deleted.";
+            TempData["SaveResult"] = "Symptom deleted.";
             return RedirectToAction("Index");
         }
 
 
-        private CategoryService CreateCategoryService()
+        private SymptomService CreateSymptomService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new CategoryService(userId);
+            var service = new SymptomService(userId);
             return service;
         }
+
     }
 }
