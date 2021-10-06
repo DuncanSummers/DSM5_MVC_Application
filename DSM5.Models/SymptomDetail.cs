@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace DSM5.Models
 {
-    class SymptomDetail
+    public class SymptomDetail
     {
+        public int SymptomID { get; set; }
+        public string Description { get; set; }
     }
 }
