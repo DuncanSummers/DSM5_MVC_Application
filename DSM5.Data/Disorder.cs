@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,7 +16,7 @@ namespace DSM5.Data
         [Display(Name = "ICD-10-CM")]
         public string ICD { get; set; }
         [Required]
-        public string Subcategory { get; set; }
+        public string Category { get; set; }
         [Required]
         public string DisorderName { get; set; }
         [Required]

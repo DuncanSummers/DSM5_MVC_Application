@@ -11,7 +11,7 @@ namespace DSM5.Models
     {
         public int DisorderID { get; set; }
         public string ICD { get; set; }
-        public string Subcategory { get; set; }
+        public string Category { get; set; }
         public string DisorderName { get; set; }
         public virtual ICollection<DisorderSymptom> Symptoms { get; set; }
         public virtual ICollection<Comorbidity> Comorbidities { get; set; }
