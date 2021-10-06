@@ -57,6 +57,7 @@
     <Compile Include="CategoryService.cs" />
     <Compile Include="DisorderService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SymptomService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -63,6 +63,10 @@
     <Compile Include="DisorderEdit.cs" />
     <Compile Include="DisorderListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SymptomCreate.cs" />
+    <Compile Include="SymptomDetail.cs" />
+    <Compile Include="SymptomEdit.cs" />
+    <Compile Include="SymptomListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
