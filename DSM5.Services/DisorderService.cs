@@ -25,7 +25,7 @@ namespace DSM5.Services
                 {
                     DisorderName = model.DisorderName,
                     ICD = model.ICD,
-                    Subcategory = model.Subcategory,
+                    Category = model.Category,
                     Symptoms = model.Symptoms
                 };
             using (var ctx = new ApplicationDbContext())
@@ -46,7 +46,7 @@ namespace DSM5.Services
                         {
                             DisorderID = e.DisorderID,
                             ICD = e.ICD,
-                            Subcategory = e.Subcategory,
+                            Category = e.Category,
                             DisorderName = e.DisorderName,
                             Symptoms = e.Symptoms,
                             Comorbidities = e.Comorbidities
@@ -68,7 +68,7 @@ namespace DSM5.Services
                 {
                     DisorderID = entity.DisorderID,
                     ICD = entity.ICD,
-                    Subcategory = entity.Subcategory,
+                    Category = entity.Category,
                     DisorderName = entity.DisorderName,
                     Symptoms = entity.Symptoms,
                     Comorbidities = entity.Comorbidities
@@ -86,7 +86,7 @@ namespace DSM5.Services
                         .Single(e => e.DisorderID == model.DisorderID);
 
                 entity.ICD = model.ICD;
-                entity.Subcategory = model.Subcategory;
+                entity.Category = model.Category,
                 entity.DisorderName = model.DisorderName;
                 entity.Symptoms = model.Symptoms;
                 entity.Comorbidities = model.Comorbidities;
