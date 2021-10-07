@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="CategoryService.cs" />
     <Compile Include="DisorderService.cs" />
+    <Compile Include="DisorderSymptomService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SymptomService.cs" />
   </ItemGroup>
