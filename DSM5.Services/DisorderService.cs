@@ -86,7 +86,7 @@ namespace DSM5.Services
                         .Single(e => e.DisorderID == model.DisorderID);
 
                 entity.ICD = model.ICD;
-                entity.Category = model.Category,
+                entity.Category = model.Category;
                 entity.DisorderName = model.DisorderName;
                 entity.Symptoms = model.Symptoms;
                 entity.Comorbidities = model.Comorbidities;
