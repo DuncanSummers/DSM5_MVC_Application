@@ -17,7 +17,7 @@ namespace DSM5.Services
             _userID = userId;
         }
 
-        public bool CreateDisorderSymptomService(DisorderSymptomCreate model)
+        public bool CreateDisorderSymptom(DisorderSymptomCreate model)
         {
             var entity =
                 new DisorderSymptom()
