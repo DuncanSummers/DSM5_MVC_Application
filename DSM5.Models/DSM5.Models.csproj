@@ -58,6 +58,10 @@
     <Compile Include="CategoryDetail.cs" />
     <Compile Include="CategoryEdit.cs" />
     <Compile Include="CategoryListItem.cs" />
+    <Compile Include="ComorbidityCreate.cs" />
+    <Compile Include="ComorbidityDetail.cs" />
+    <Compile Include="ComorbidityEdit.cs" />
+    <Compile Include="ComorbidityListItem.cs" />
     <Compile Include="DisorderCreate.cs" />
     <Compile Include="DisorderDetail.cs" />
     <Compile Include="DisorderEdit.cs" />
