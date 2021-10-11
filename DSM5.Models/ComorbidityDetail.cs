@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace DSM5.Models
 {
-    class ComorbidityDetail
+    public class ComorbidityDetail
     {
+        public int BaseID { get; set; }
+        public int ComorbidityID { get; set; }
     }
 }
