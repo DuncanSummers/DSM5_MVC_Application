@@ -259,10 +259,14 @@
     <Content Include="Views\Disorder\Edit.cshtml" />
     <Content Include="Views\Symptom\Edit.cshtml" />
     <Content Include="Views\DisorderSymptom\Delete.cshtml" />
+    <Content Include="Views\Comorbidity\Index.cshtml" />
+    <Content Include="Views\Comorbidity\Create.cshtml" />
+    <Content Include="Views\Comorbidity\Details.cshtml" />
+    <Content Include="Views\Comorbidity\Edit.cshtml" />
+    <Content Include="Views\Comorbidity\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Comorbidity\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
