@@ -239,7 +239,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Disorder\Index.cshtml" />
     <Content Include="Views\Disorder\Create.cshtml" />
     <Content Include="Views\Disorder\Details.cshtml" />
     <Content Include="Views\Disorder\Delete.cshtml" />
@@ -264,6 +263,7 @@
     <Content Include="Views\Comorbidity\Details.cshtml" />
     <Content Include="Views\Comorbidity\Edit.cshtml" />
     <Content Include="Views\Comorbidity\Delete.cshtml" />
+    <Content Include="Views\Disorder\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
