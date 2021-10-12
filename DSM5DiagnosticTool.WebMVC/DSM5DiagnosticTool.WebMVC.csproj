@@ -169,6 +169,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\ComorbidityController.cs" />
     <Compile Include="Controllers\DisorderController.cs" />
     <Compile Include="Controllers\DisorderSymptomController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -242,6 +243,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Category\" />
+    <Folder Include="Views\Comorbidity\" />
     <Folder Include="Views\DisorderSymptom\" />
     <Folder Include="Views\Disorder\" />
     <Folder Include="Views\Symptom\" />

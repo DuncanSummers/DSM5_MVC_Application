@@ -17,7 +17,7 @@ namespace DSM5.Services
             _userID = userID;
         }
 
-        public bool CreateComorbidityService(ComorbidityCreate model)
+        public bool CreateComorbidity(ComorbidityCreate model)
         {
             var entity =
                 new Comorbidity()
