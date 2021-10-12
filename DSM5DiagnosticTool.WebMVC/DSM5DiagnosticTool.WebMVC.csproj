@@ -239,13 +239,17 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Disorder\Index.cshtml" />
+    <Content Include="Views\Disorder\Create.cshtml" />
+    <Content Include="Views\Disorder\Details.cshtml" />
+    <Content Include="Views\Disorder\Edit.cshtml" />
+    <Content Include="Views\Disorder\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Category\" />
     <Folder Include="Views\Comorbidity\" />
     <Folder Include="Views\DisorderSymptom\" />
-    <Folder Include="Views\Disorder\" />
     <Folder Include="Views\Symptom\" />
   </ItemGroup>
   <ItemGroup>

@@ -15,6 +15,7 @@ namespace DSM5DiagnosticTool.WebMVC.Controllers
         // GET: Disorder
         public ActionResult Index()
         {
+            var model = new DisorderListItem[0];
             return View();
         }
 
