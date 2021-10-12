@@ -1,4 +1,4 @@
-﻿@model IEnumerable<DSM5.Models.DisorderSymptomListItem>
+﻿@model IEnumerable<DSM5.Models.ComorbidityListItem>
 
 @{
     ViewBag.Title = "Index";
@@ -23,10 +23,10 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.DisorderID)
+            @Html.DisplayNameFor(model => model.BaseID)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SymptomID)
+            @Html.DisplayNameFor(model => model.ComorbidityID)
         </th>
         <th></th>
     </tr>
@@ -35,15 +35,15 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.DisorderID)
+                @Html.DisplayFor(modelItem => item.BaseID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.SymptomID)
+                @Html.DisplayFor(modelItem => item.ComorbidityID)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
             </td>
         </tr>
     }
