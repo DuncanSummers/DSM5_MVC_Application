@@ -16,7 +16,7 @@ namespace DSM5DiagnosticTool.WebMVC.Controllers
         public ActionResult Index()
         {
             var model = new CategoryListItem[0];
-            return View();
+            return View(model);
         }
 
         // GET:
