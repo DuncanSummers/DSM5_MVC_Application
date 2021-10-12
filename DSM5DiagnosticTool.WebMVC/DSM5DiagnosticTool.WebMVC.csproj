@@ -242,23 +242,27 @@
     <Content Include="Views\Disorder\Index.cshtml" />
     <Content Include="Views\Disorder\Create.cshtml" />
     <Content Include="Views\Disorder\Details.cshtml" />
-    <Content Include="Views\Disorder\Edit.cshtml" />
     <Content Include="Views\Disorder\Delete.cshtml" />
     <Content Include="Views\Category\Index.cshtml" />
     <Content Include="Views\Category\Create.cshtml" />
     <Content Include="Views\Category\Details.cshtml" />
-    <Content Include="Views\Category\Edit.cshtml" />
     <Content Include="Views\Category\Delete.cshtml" />
     <Content Include="Views\Symptom\Index.cshtml" />
     <Content Include="Views\Symptom\Create.cshtml" />
     <Content Include="Views\Symptom\Details.cshtml" />
-    <Content Include="Views\Symptom\Edit.cshtml" />
     <Content Include="Views\Symptom\Delete.cshtml" />
+    <Content Include="Views\DisorderSymptom\Index.cshtml" />
+    <Content Include="Views\DisorderSymptom\Create.cshtml" />
+    <Content Include="Views\DisorderSymptom\Details.cshtml" />
+    <Content Include="Views\DisorderSymptom\Edit.cshtml" />
+    <Content Include="Views\Category\Edit.cshtml" />
+    <Content Include="Views\Disorder\Edit.cshtml" />
+    <Content Include="Views\Symptom\Edit.cshtml" />
+    <Content Include="Views\DisorderSymptom\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Comorbidity\" />
-    <Folder Include="Views\DisorderSymptom\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
