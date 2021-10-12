@@ -244,10 +244,14 @@
     <Content Include="Views\Disorder\Details.cshtml" />
     <Content Include="Views\Disorder\Edit.cshtml" />
     <Content Include="Views\Disorder\Delete.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\Category\Create.cshtml" />
+    <Content Include="Views\Category\Details.cshtml" />
+    <Content Include="Views\Category\Edit.cshtml" />
+    <Content Include="Views\Category\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Category\" />
     <Folder Include="Views\Comorbidity\" />
     <Folder Include="Views\DisorderSymptom\" />
     <Folder Include="Views\Symptom\" />
