@@ -12,9 +12,11 @@ namespace DSM5.Data
     {
         [Key]
         public int ID { get; set; }
+        [Required]
         [ForeignKey(nameof(Disorder))]
         public int DisorderID { get; set; }
         public virtual Disorder Disorder { get; set; }
+        [Required]
         [ForeignKey(nameof(Symptom))]
         public int SymptomID { get; set; }
         public virtual Symptom Symptom { get; set; }
