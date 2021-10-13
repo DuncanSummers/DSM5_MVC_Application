@@ -1,4 +1,4 @@
-﻿@model IEnumerable<DSM5.Models.DisorderSymptomListItem>
+﻿@model IEnumerable<DSM5.Models.DisorderListItem>
 
 @{
     ViewBag.Title = "Index";
@@ -9,7 +9,6 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-
 @if (TempData.ContainsKey("SaveResult"))
 {
     <div class="alert alert-success fade in" role="alert">
@@ -26,7 +25,13 @@
             @Html.DisplayNameFor(model => model.DisorderID)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.SymptomID)
+            @Html.DisplayNameFor(model => model.ICD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DisorderName)
         </th>
         <th></th>
     </tr>
@@ -38,12 +43,18 @@
                 @Html.DisplayFor(modelItem => item.DisorderID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.SymptomID)
+                @Html.DisplayFor(modelItem => item.ICD)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DisorderName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
             </td>
         </tr>
     }
