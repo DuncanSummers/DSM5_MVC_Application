@@ -17,6 +17,5 @@ namespace DSM5.Data
         [ForeignKey(nameof(Comorbid))]
         public int ComorbidityID { get; set; }
         public virtual Disorder Comorbid { get; set; }
-
     }
 }

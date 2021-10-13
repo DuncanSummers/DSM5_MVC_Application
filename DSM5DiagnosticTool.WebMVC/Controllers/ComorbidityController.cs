@@ -14,7 +14,9 @@ namespace DSM5DiagnosticTool.WebMVC.Controllers
         // GET: Comorbidity
         public ActionResult Index()
         {
-            var model = new ComorbidityListItem[0];
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new ComorbidityService(userId);
+            var model = service.GetComorbidty();
             return View(model);
         }
 

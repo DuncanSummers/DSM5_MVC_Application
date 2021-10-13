@@ -15,13 +15,17 @@ namespace DSM5DiagnosticTool.WebMVC.Controllers
         // GET: Category
         public ActionResult Index()
         {
-            var model = new CategoryListItem[0];
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new CategoryService(userId);
+            var model = service.GetCategories();
+
             return View(model);
         }
 
         // GET:
         public ActionResult Create()
         {
+
             return View();
         }
 

@@ -15,7 +15,9 @@ namespace DSM5DiagnosticTool.WebMVC.Controllers
         // GET: Symptom
         public ActionResult Index()
         {
-            var model = new SymptomListItem[0];
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new SymptomService(userId);
+            var model = service.GetSymptom();
             return View(model);
         }
 

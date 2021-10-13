@@ -10,9 +10,7 @@ namespace DSM5.Models
 {
     public class DisorderSymptomCreate
     {
-        [ForeignKey(nameof(Disorder))]
         public int DisorderID { get; set; }
-        [ForeignKey(nameof(Symptom))]
         public int SymptomID { get; set; }
 
     }
