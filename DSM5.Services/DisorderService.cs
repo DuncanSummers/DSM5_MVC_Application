@@ -26,7 +26,6 @@ namespace DSM5.Services
                     DisorderName = model.DisorderName,
                     ICD = model.ICD,
                     Category = model.Category,
-                    Symptoms = model.Symptoms
                 };
             using (var ctx = new ApplicationDbContext())
             {
