@@ -41,6 +41,7 @@ namespace DSM5.Services
                         .DisorderSymptoms
                         .Select(e => new DisorderSymptomListItem()
                         {
+                            ID = e.ID,
                             DisorderID = e.DisorderID,
                             SymptomID = e.SymptomID
                         });
