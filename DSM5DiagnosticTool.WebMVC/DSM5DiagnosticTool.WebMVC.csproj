@@ -253,7 +253,6 @@
     <Content Include="Views\DisorderSymptom\Index.cshtml" />
     <Content Include="Views\DisorderSymptom\Create.cshtml" />
     <Content Include="Views\DisorderSymptom\Details.cshtml" />
-    <Content Include="Views\DisorderSymptom\Edit.cshtml" />
     <Content Include="Views\Category\Edit.cshtml" />
     <Content Include="Views\Disorder\Edit.cshtml" />
     <Content Include="Views\Symptom\Edit.cshtml" />
@@ -264,6 +263,7 @@
     <Content Include="Views\Comorbidity\Edit.cshtml" />
     <Content Include="Views\Comorbidity\Delete.cshtml" />
     <Content Include="Views\Disorder\Index.cshtml" />
+    <Content Include="Views\DisorderSymptom\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
