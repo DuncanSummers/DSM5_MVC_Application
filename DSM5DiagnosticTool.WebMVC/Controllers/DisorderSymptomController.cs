@@ -63,8 +63,8 @@ namespace DSM5DiagnosticTool.WebMVC.Controllers
             var model =
                new DisorderSymptomEdit
                {
+                   DisorderID = detail.DisorderID,
                    SymptomID = detail.SymptomID,
-                   DisorderID = detail.DisorderID
                };
             return View(model);
         }

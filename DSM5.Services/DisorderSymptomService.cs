@@ -41,6 +41,7 @@ namespace DSM5.Services
                         .DisorderSymptoms
                         .Select(e => new DisorderSymptomListItem()
                         {
+                            ID = e.ID,
                             DisorderID = e.DisorderID,
                             SymptomID = e.SymptomID
                         });
@@ -74,8 +75,8 @@ namespace DSM5.Services
                         .DisorderSymptoms
                         .Single(e => e.DisorderID == model.DisorderID);
 
-                entity.DisorderID = model.DisorderID;
                 entity.SymptomID = model.SymptomID;
+                entity.DisorderID = model.DisorderID;
 
                 return ctx.SaveChanges() == 1;
             }

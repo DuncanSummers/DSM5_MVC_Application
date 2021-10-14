@@ -1,4 +1,4 @@
-﻿@model DSM5.Models.DisorderSymptomDetail
+﻿@model DSM5.Models.DisorderDetail
 
 @{
     ViewBag.Title = "Details";
@@ -7,7 +7,7 @@
 <h2>Details</h2>
 
 <div>
-    <h4>DisorderSymptomDetail</h4>
+    <h4>DisorderDetail</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -19,16 +19,48 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.SymptomID)
+            @Html.DisplayNameFor(model => model.ICD)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.SymptomID)
+            @Html.DisplayFor(model => model.ICD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DisorderName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DisorderName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Symptoms)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Symptoms)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comorbidities)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comorbidities)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DisorderID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
