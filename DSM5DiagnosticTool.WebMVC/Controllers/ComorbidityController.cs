@@ -16,7 +16,7 @@ namespace DSM5DiagnosticTool.WebMVC.Controllers
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new ComorbidityService(userId);
-            var model = service.GetComorbidty();
+            var model = service.GetComorbidity();
             return View(model);
         }
 
@@ -77,7 +77,7 @@ namespace DSM5DiagnosticTool.WebMVC.Controllers
             {
                 if (!ModelState.IsValid) return View(model);
 
-                if (model.BaseID != id)
+                if (model.ID != id)
                 {
                     ModelState.AddModelError("", "Wrong ID");
                     return View(model);

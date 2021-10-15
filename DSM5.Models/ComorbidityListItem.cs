@@ -10,6 +10,7 @@ namespace DSM5.Models
     public class ComorbidityListItem
     {
         [Key]
+        public int ID { get; set; }
         public int BaseID { get; set; }
         public int ComorbidityID { get; set; }
     }

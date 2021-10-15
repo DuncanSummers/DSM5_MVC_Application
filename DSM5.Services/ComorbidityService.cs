@@ -32,7 +32,7 @@ namespace DSM5.Services
             }
         }
 
-        public IEnumerable<ComorbidityListItem> GetComorbidty()
+        public IEnumerable<ComorbidityListItem> GetComorbidity()
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -41,6 +41,7 @@ namespace DSM5.Services
                         .Comorbidities
                         .Select(e => new ComorbidityListItem()
                         {
+                            ID = e.ID,
                             BaseID = e.BaseID,
                             ComorbidityID = e.ComorbidityID
                         });
@@ -55,9 +56,10 @@ namespace DSM5.Services
                 var entity =
                     ctx
                         .Comorbidities
-                        .Single(e => e.BaseID == id);
+                        .Single(e => e.ID == id);
                 return new ComorbidityDetail()
                 {
+                    ID = entity.ID,
                     BaseID = entity.BaseID,
                     ComorbidityID = entity.ComorbidityID
                 };
@@ -87,7 +89,7 @@ namespace DSM5.Services
                 var entity =
                     ctx
                         .Comorbidities
-                        .Single(e => e.BaseID == id);
+                        .Single(e => e.ID == id);
 
                 ctx.Comorbidities.Remove(entity);
 

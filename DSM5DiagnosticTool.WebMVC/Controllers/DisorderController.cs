@@ -55,7 +55,7 @@ namespace DSM5DiagnosticTool.WebMVC.Controllers
             var dsService = new DisorderSymptomService(userId);
             ViewBag.DisorderSymptom = dsService.GetDisorderSymptom();
             var cService = new ComorbidityService(userId);
-            ViewBag.Comorbidity = cService.GetComorbidty();
+            ViewBag.Comorbidity = cService.GetComorbidity();
             var svc = CreateDisorderService();
             var model = svc.GetDisorderByID(id);
 
