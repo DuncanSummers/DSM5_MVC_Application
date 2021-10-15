@@ -77,7 +77,7 @@ namespace DSM5DiagnosticTool.WebMVC.Controllers
             {
                 if (!ModelState.IsValid) return View(model);
 
-                if (model.BaseID != id)
+                if (model.ID != id)
                 {
                     ModelState.AddModelError("", "Wrong ID");
                     return View(model);

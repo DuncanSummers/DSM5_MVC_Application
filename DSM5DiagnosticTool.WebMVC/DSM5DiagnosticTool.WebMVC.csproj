@@ -257,11 +257,11 @@
     <Content Include="Views\Comorbidity\Index.cshtml" />
     <Content Include="Views\Comorbidity\Create.cshtml" />
     <Content Include="Views\Comorbidity\Details.cshtml" />
-    <Content Include="Views\Comorbidity\Edit.cshtml" />
     <Content Include="Views\Comorbidity\Delete.cshtml" />
     <Content Include="Views\Disorder\Index.cshtml" />
     <Content Include="Views\DisorderSymptom\Edit.cshtml" />
     <Content Include="Views\Disorder\Details.cshtml" />
+    <Content Include="Views\Comorbidity\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
