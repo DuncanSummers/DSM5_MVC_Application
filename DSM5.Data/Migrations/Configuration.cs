@@ -10,6 +10,7 @@ namespace DSM5.Data.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
+            ContextKey = "DSM5.Data.ApplicationDbContext";
         }
 
         protected override void Seed(DSM5.Data.ApplicationDbContext context)

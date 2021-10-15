@@ -32,7 +32,7 @@ namespace DSM5.Services
             }
         }
 
-        public IEnumerable<ComorbidityListItem> GetComorbidty()
+        public IEnumerable<ComorbidityListItem> GetComorbidity()
         {
             using (var ctx = new ApplicationDbContext())
             {

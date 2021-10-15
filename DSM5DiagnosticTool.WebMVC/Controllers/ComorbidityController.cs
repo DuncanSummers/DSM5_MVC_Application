@@ -16,7 +16,7 @@ namespace DSM5DiagnosticTool.WebMVC.Controllers
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new ComorbidityService(userId);
-            var model = service.GetComorbidty();
+            var model = service.GetComorbidity();
             return View(model);
         }
 
