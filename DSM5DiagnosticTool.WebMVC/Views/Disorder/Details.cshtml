@@ -47,15 +47,25 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Symptoms)
+            @foreach (var item in Model.Symptoms)
+                {
+            <tr>
+                <td>@item.SymptomID</td>
+            </tr>
+                }
         </dd>
-
+        
         <dt>
             @Html.DisplayNameFor(model => model.Comorbidities)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Comorbidities)
+            @foreach (var item in Model.Comorbidities)
+            {
+                <tr>
+                    <td>@item.ComorbidityID</td>
+                </tr>
+            }
         </dd>
 
     </dl>

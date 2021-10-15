@@ -3,9 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - DSM-5 Diagnostic Tool</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
 
 </head>
 <body>
@@ -27,8 +28,6 @@
                     <li>@Html.ActionLink("Symptoms", "Index", "Symptom")</li>
                     <li>@Html.ActionLink("Disorder Symptoms", "Index", "DisorderSymptom")</li>
                     <li>@Html.ActionLink("Comorbidity", "Index", "Comorbidity")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -38,7 +37,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Duncan Summers</p>
         </footer>
     </div>
 
