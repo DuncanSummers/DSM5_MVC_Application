@@ -13,7 +13,7 @@ namespace DSM5.Models
         public string ICD { get; set; }
         public string Category { get; set; }
         public string DisorderName { get; set; }
-        public virtual ICollection<DisorderSymptom> Symptoms { get; set; }
-        public virtual ICollection<Comorbidity> Comorbidities { get; set; }
+        public ICollection<DisorderSymptom> Symptoms { get; set; }
+        public ICollection<Comorbidity> Comorbidities { get; set; }
     }
 }
