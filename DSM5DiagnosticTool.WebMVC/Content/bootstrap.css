@@ -21,7 +21,9 @@ aside,
 details,
 figcaption,
 figure,
-footer,
+footer {
+    text-align: center;
+}
 header,
 hgroup,
 main,
