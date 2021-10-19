@@ -10,9 +10,7 @@ namespace DSM5.Models
 {
     public class ComorbidityCreate
     {
-        [ForeignKey(nameof(Disorder))]
         public int BaseID { get; set; }
-        [ForeignKey(nameof(Disorder))]
         public int ComorbidityID { get; set; }
     }
 }

@@ -175,6 +175,11 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\SymptomController.cs" />
+    <Compile Include="EFModel1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFModel1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -189,6 +194,10 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\DSM5.jpg" />
+    <Content Include="EFModel1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EFModel1.cs</LastGenOutput>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -197,6 +206,10 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\variables.less" />
     <Content Include="Content\theme.less" />
+    <Content Include="EFModel1.efmodel" />
+    <Content Include="EFModel1.efmodel.diagramx">
+      <DependentUpon>EFModel1.efmodel</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -295,6 +308,9 @@
       <Project>{c7a56f69-7faa-4868-8256-2b002ee11964}</Project>
       <Name>DSM5.Services</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

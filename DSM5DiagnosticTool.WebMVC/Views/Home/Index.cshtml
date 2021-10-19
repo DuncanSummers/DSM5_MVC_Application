@@ -1,12 +1,13 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+<link rel="stylesheet" href="~/Content/Site.css" />
 
-<div class="jumbotron jumbotron-fluid" style="text-align:center">
-    <img id="dsm5-cover" src="~/Content/images/DSM5.jpg" alt="DSM-5" style="width: 175px; height: 250px; padding-bottom: 30px; align-self: center" />
+<div class="jumbotron jumbotron-fluid" style="text-align: center; box-shadow: 5px 8px 12px black;">
+    <img id="dsm5-cover" src="~/Content/images/DSM5.jpg" alt="DSM-5" style="width: 175px; height: 250px;  align-self: center; box-shadow: 5px 10px 18px black;" />
     <h1 style="text-align: center">DSM-<i>5</i></h1>
     <p class="lead" style="text-align:center">Welcome to a Web MVC application that features the knowledge and utility of the DSM-5, the "Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition". This application uses the taxonomic categories, symptoms, and comorbidities associated with all psychiatric disorders professionals use to diagnose their patients.</p>
-    <p style="text-align: center"><a href="https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/dsm-5-fact-sheets" class="btn btn-primary btn-md align-self-center" >APA - American Psychiatric Association &raquo;</a></p>
+    <p id="apa-button" style="text-align: center"><a href="https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/dsm-5-fact-sheets" class="btn btn-primary btn-md align-self-center" >APA - American Psychiatric Association &raquo;</a></p>
 </div>
 
 <div class="row">
@@ -18,14 +19,14 @@
         <div class="row">
             <div class="col-sm-2">
                 <ul>
-                    <li class="btn btn-default">
+                    <li class="btn btn-default" style="box-shadow: 2px 4px 6px #00bc8c;">
                         @Html.ActionLink("See Disorders", "Index", "Disorder")
                     </li>
                 </ul>
             </div>
             <div class="col-sm-2">
                 <ul>
-                    <li class="btn btn-default">
+                    <li class="btn btn-default" style="box-shadow: 2px 4px 6px #00bc8c;">
                         @Html.ActionLink("Add Disorder", "Create", "Disorder")
                     </li>
                 </ul>
@@ -41,14 +42,14 @@
         <div class="row">
             <div class="col-sm-2">
                 <ul>
-                    <li class="btn btn-default">
+                    <li class="btn btn-default" style="box-shadow: 2px 4px 6px #00bc8c; ">
                         @Html.ActionLink("See Categories", "Index", "Category")
                     </li>
                 </ul>
             </div>
             <div class="col-sm-2">
                 <ul>
-                    <li class="btn btn-default">
+                    <li class="btn btn-default" style="box-shadow: 2px 4px 6px #00bc8c;">
                         @Html.ActionLink("Add Category", "Create", "Category")
                     </li>
                 </ul>
@@ -64,14 +65,14 @@
         <div class="row">
             <div class="col-sm-2">
                 <ul>
-                    <li class="btn btn-default">
+                    <li class="btn btn-default" style="box-shadow: 2px 4px 6px #00bc8c;">
                         @Html.ActionLink("See Symptoms", "Index", "Symptom")
                     </li>
                 </ul>
             </div>
             <div class="col-sm-2">
                 <ul>
-                    <li class="btn btn-default">
+                    <li class="btn btn-default" style="box-shadow: 2px 4px 6px #00bc8c;">
                         @Html.ActionLink("Add Symptom", "Create", "Symptom")
                     </li>
                 </ul>
@@ -87,14 +88,14 @@
         <div class="row">
             <div class="col-sm-2">
                 <ul>
-                    <li class="btn btn-default">
+                    <li class="btn btn-default" style="box-shadow: 2px 4px 6px #00bc8c;">
                         @Html.ActionLink("See Disorder Symptoms", "Index", "DisorderSymptom")
                     </li>
                 </ul>
             </div>
             <div class="col-sm-2">
                 <ul>
-                    <li class="btn btn-default">
+                    <li class="btn btn-default" style="box-shadow: 2px 4px 6px #00bc8c;">
                         @Html.ActionLink("Add Symptom To Disorder", "Create", "DisorderSymptom")
                     </li>
                 </ul>
@@ -110,14 +111,14 @@
         <div class="row">
             <div class="col-sm-2">
                 <ul>
-                    <li class="btn btn-default">
+                    <li class="btn btn-default" style="box-shadow: 2px 4px 6px #00bc8c;">
                         @Html.ActionLink("See Comorbidities", "Index", "Comorbidity")
                     </li>
                 </ul>
             </div>
             <div class="col-sm-2">
                 <ul>
-                    <li class="btn btn-default">
+                    <li class="btn btn-default" style="box-shadow: 2px 4px 6px #00bc8c;">
                         @Html.ActionLink("Add Comorbidity To Disorder", "Create", "Comorbidity")
                     </li>
                 </ul>
