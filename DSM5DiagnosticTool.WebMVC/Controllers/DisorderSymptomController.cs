@@ -115,13 +115,11 @@ namespace DSM5DiagnosticTool.WebMVC.Controllers
             return RedirectToAction("Index");
         }
 
-
         private DisorderSymptomService CreateDisorderSymptomService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new DisorderSymptomService(userId);
             return service;
         }
-
     }
 }

@@ -35,43 +35,43 @@ footer {
 }
 
 .dsm5-cover {
-    animation-name: fade-in;
-    animation-duration: 4s;
+    animation-name: fade-in !important;
+    animation-duration: 4s !important;
 }
 
 #lead {
-    animation-name: slide-right-fade-in;
-    animation-duration: 1.5s;
+    animation-name: slide-right-fade-in !important;
+    animation-duration: 1.5s !important;
 }
 
 .apa-button {
-    animation: glow .5s infinite alternate;
-    animation-name: slide-right-fade-in;
-    animation-duration: 2s;
+    animation: glow .5s infinite alternate !important;
+    animation-name: slide-right-fade-in !important;
+    animation-duration: 2s !important;
 }
 
-@keyframes fade-in {
+@-webkit-keyframes fade-in {
     from {
         opacity: 0%;
     }
     to {
-        opacity: 0%;
+        opacity: 100%;
     }
 }
 
-@keyframes slide-right-fade-in {
+@-webkit-keyframes slide-right-fade-in {
     from {
         opacity: 0%;
         transform: translateX(-800px);
     }
 
     to {
-        opacity: 0%;
+        opacity: 100%;
         transform: translateX(0px);
     }
 }
 
-@keyframes glow {
+@-webkit-keyframes glow {
     from {
         box-shadow: 0 0 5px -5px #D7E9F7;
     }

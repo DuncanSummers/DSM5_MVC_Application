@@ -74,27 +74,25 @@ namespace DSM5DiagnosticTool.WebMVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, ComorbidityEdit model)
         {
+            if (!ModelState.IsValid) return View(model);
+
+            if (model.ID != id)
             {
-                if (!ModelState.IsValid) return View(model);
-
-                if (model.ID != id)
-                {
-                    ModelState.AddModelError("", "Wrong ID");
-                    return View(model);
-                }
-
-                var service = CreateComorbidityService();
-
-                if (service.UpdateComorbidity(model))
-                {
-                    TempData["SaveResult"] = "Comrobidity updated.";
-                    return RedirectToAction("Index");
-                }
-
-                ModelState.AddModelError("", "Unable to update comorbidity.");
+                ModelState.AddModelError("", "Wrong ID");
                 return View(model);
-
             }
+
+            var service = CreateComorbidityService();
+
+            if (service.UpdateComorbidity(model))
+            {
+                TempData["SaveResult"] = "Comrobidity updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Unable to update comorbidity.");
+            return View(model);
+
         }
 
         [ActionName("Delete")]

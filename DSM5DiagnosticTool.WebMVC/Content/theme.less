@@ -350,3 +350,51 @@ a.list-group-item {
 .panel-default > .panel-heading {
   background-color: @panel-footer-bg;
 }
+
+.dsm5-cover {
+    animation-name: fade-in !important;
+    animation-duration: 4s !important;
+}
+
+#lead {
+    animation-name: slide-right-fade-in !important;
+    animation-duration: 1.5s !important;
+}
+
+.apa-button {
+    animation: glow .5s infinite alternate !important;
+    animation-name: slide-right-fade-in !important;
+    animation-duration: 2s !important;
+}
+
+@-webkit-keyframes fade-in {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+@-webkit-keyframes slide-right-fade-in {
+    from {
+        opacity: 0%;
+        transform: translateX(-800px);
+    }
+
+    to {
+        opacity: 100%;
+        transform: translateX(0px);
+    }
+}
+
+@-webkit-keyframes glow {
+    from {
+        box-shadow: 0 0 5px -5px #D7E9F7;
+    }
+
+    to {
+        box-shadow: 0 0 5px 5px #D7E9F7;
+    }
+}
