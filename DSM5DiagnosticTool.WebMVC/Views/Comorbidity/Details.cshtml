@@ -1,0 +1,42 @@
+﻿@model DSM5.Models.ComorbidityDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Comorbidity</h2>
+
+<div>
+    <h4>Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BaseID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BaseID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ComorbidityID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ComorbidityID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

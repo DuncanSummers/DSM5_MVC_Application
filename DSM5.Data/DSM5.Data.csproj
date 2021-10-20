@@ -54,12 +54,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Category.cs" />
+    <Compile Include="Comorbidity.cs" />
+    <Compile Include="Disorder.cs" />
+    <Compile Include="DisorderSymptom.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\202110122026350_InitialCreate.cs" />
+    <Compile Include="Migrations\202110122026350_InitialCreate.Designer.cs">
+      <DependentUpon>202110122026350_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202110152008537_initial.cs" />
+    <Compile Include="Migrations\202110152008537_initial.Designer.cs">
+      <DependentUpon>202110152008537_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Symptom.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202110122026350_InitialCreate.resx">
+      <DependentUpon>202110122026350_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202110152008537_initial.resx">
+      <DependentUpon>202110152008537_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

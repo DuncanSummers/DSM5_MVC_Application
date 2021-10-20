@@ -54,11 +54,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryCreate.cs" />
+    <Compile Include="CategoryDetail.cs" />
+    <Compile Include="CategoryEdit.cs" />
+    <Compile Include="CategoryListItem.cs" />
+    <Compile Include="ComorbidityCreate.cs" />
+    <Compile Include="ComorbidityDetail.cs" />
+    <Compile Include="ComorbidityEdit.cs" />
+    <Compile Include="ComorbidityListItem.cs" />
+    <Compile Include="DisorderCreate.cs" />
+    <Compile Include="DisorderDetail.cs" />
+    <Compile Include="DisorderEdit.cs" />
+    <Compile Include="DisorderListItem.cs" />
+    <Compile Include="DisorderSymptomCreate.cs" />
+    <Compile Include="DisorderSymptomDetail.cs" />
+    <Compile Include="DisorderSymptomEdit.cs" />
+    <Compile Include="DisorderSymptomListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SymptomCreate.cs" />
+    <Compile Include="SymptomDetail.cs" />
+    <Compile Include="SymptomEdit.cs" />
+    <Compile Include="SymptomListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DSM5.Data\DSM5.Data.csproj">
+      <Project>{F77174DE-297A-4D62-855F-7C32A2FAFB34}</Project>
+      <Name>DSM5.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

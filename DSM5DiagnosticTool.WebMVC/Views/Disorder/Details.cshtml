@@ -1,0 +1,76 @@
+﻿@model DSM5.Models.DisorderDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Disorder</h2>
+
+<div>
+    <h4>Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DisorderID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DisorderID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ICD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ICD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DisorderName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DisorderName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Symptoms)
+        </dt>
+
+        <dd>
+            @foreach (var item in Model.Symptoms)
+                {
+            <tr>
+                <td>@item.SymptomID</td>
+            </tr>
+                }
+        </dd>
+        
+        <dt>
+            @Html.DisplayNameFor(model => model.Comorbidities)
+        </dt>
+
+        <dd>
+            @foreach (var item in Model.Comorbidities)
+            {
+                <tr>
+                    <td>@item.ComorbidityID</td>
+                </tr>
+            }
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DisorderID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

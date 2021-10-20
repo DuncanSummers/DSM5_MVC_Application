@@ -1,0 +1,62 @@
+﻿@model IEnumerable<DSM5.Models.DisorderListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Disorders</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+        @ViewBag.SaveResult
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DisorderID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ICD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DisorderName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DisorderID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ICD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DisorderName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.DisorderID  }) |
+                @Html.ActionLink("Details", "Details", new {  id=item.DisorderID }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.DisorderID })
+            </td>
+        </tr>
+    }
+
+</table>

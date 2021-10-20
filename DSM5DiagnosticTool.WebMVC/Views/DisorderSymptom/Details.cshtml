@@ -1,0 +1,41 @@
+﻿@model DSM5.Models.DisorderSymptomDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Disorder Symptom</h2>
+
+<div>
+    <h4>Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DisorderID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DisorderID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SymptomID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SymptomID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
