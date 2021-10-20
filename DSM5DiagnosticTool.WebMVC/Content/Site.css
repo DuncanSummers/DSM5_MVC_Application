@@ -50,7 +50,7 @@ footer {
     animation-duration: 2s !important;
 }
 
-@-webkit-keyframes fade-in {
+@-ms-keyframes fade-in {
     from {
         opacity: 0%;
     }
@@ -59,7 +59,7 @@ footer {
     }
 }
 
-@-webkit-keyframes slide-right-fade-in {
+@-ms-keyframes slide-right-fade-in {
     from {
         opacity: 0%;
         transform: translateX(-800px);
@@ -71,7 +71,7 @@ footer {
     }
 }
 
-@-webkit-keyframes glow {
+@-ms-keyframes glow {
     from {
         box-shadow: 0 0 5px -5px #D7E9F7;
     }
