@@ -48,13 +48,13 @@
 
         <dd>
             @foreach (var item in Model.Symptoms)
-                {
-            <tr>
-                <td>@item.SymptomID</td>
-            </tr>
-                }
+            {
+                <tr>
+                    <td>@item.SymptomID</td><td>, </td>
+                </tr>
+            }
         </dd>
-        
+
         <dt>
             @Html.DisplayNameFor(model => model.Comorbidities)
         </dt>

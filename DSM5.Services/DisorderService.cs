@@ -63,6 +63,7 @@ namespace DSM5.Services
                     ctx
                         .Disorders
                         .Single(e => e.DisorderID == id);
+                var ent = ctx.Comorbidities.Where(e => e.BaseID == id).ToList();
                 return new DisorderDetail
                 {
                     DisorderID = entity.DisorderID,
@@ -70,7 +71,7 @@ namespace DSM5.Services
                     Category = entity.Category,
                     DisorderName = entity.DisorderName,
                     Symptoms = entity.Symptoms,
-                    Comorbidities = entity.Comorbidities
+                    Comorbidities = ent
                 };
             }
         }
