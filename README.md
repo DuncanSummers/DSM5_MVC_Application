@@ -2,7 +2,7 @@
 ## Red Badge Final Project
 ###  A .NET Framework MVC 5 Web Application using n-tier architecture that features DSM-5 classification of mental disorders where user can view and input various disorders, their categories, their symptoms, and comorbidities
 
-## Azure-Deployment
+# Azure-Deployment
 
 ### https://dsm5diagnostictoolwebmvc20211020151057.azurewebsites.net/
 
